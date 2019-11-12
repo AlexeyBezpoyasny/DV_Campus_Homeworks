@@ -9,3 +9,4 @@ docker volume prune -f
 docker-compose -f docker-compose.yml -f docker-compose-dev.yml up -d --build --force-recreate
 # docker-compose -f ./docker-compose.yml -f ./docker-compose-dev.yml up -d
 # docker-sync-stack start
+grunt clean:Alexeyb_mytheme_en_US && grunt exec:Alexeyb_mytheme_en_US && grunt less:Alexeyb_mytheme_en_US && grunt watch

@@ -23,7 +23,7 @@ services:
         - MEMCACHED=0
     restart: always
     labels:
-      # - traefik.enable=false
+      - traefik.enable=true
       - traefik.http.frontend.rule=Host:alexey-bezpoyasny.local,www.alexey-bezpoyasny.local, alexey-bezpoyasny-second.local, www.alexey-bezpoyasny-second.local
       - traefik.http.frontend.entryPoints=http
       - traefik.https.frontend.rule=Host:alexey-bezpoyasny.local,www.alexey-bezpoyasny.local, alexey-bezpoyasny-second.local, www.alexey-bezpoyasny-second.local

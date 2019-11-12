@@ -1,0 +1,75 @@
+@color-dark-blue: #00008b;
+@color-light-blue: lighten(@color-dark-blue, 10%);
+@color-orange: #ff5501;
+@links-color: @color-orange;
+@color-message-success: @color-dark-blue;
+@color-light-red: #ffcccb;
+
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+  .page-header .panel.wrapper,
+  .page-footer {
+    background-color: @color-dark-blue;
+    border-bottom: 1px solid darken(@color-dark-blue,10%);
+  }
+
+  .page-header,
+  .header.content,
+  .copyright {
+    background-color: @color-light-blue;
+  }
+
+  .product.data.items .item.title .switch {
+    background-color: @color-dark-blue;
+    color: @color-white;
+
+    &:hover {
+      background-color: @color-light-blue;
+      }
+  }
+
+  .data.switch .counter {
+    color: @color-white;
+  }
+
+  .product.data.items .item.title:not(.disabled) > .switch:active,
+  .product.data.items .item.title.active .switch,
+  .product.data.items .item.title.active .switch:focus,
+  .product.data.items .item.title.active .switch:hover {
+    background-color: @color-light-blue;
+    color: @color-white;
+  }
+
+  a, a:visited {
+    color: @links-color;
+  }
+
+  .footer.content .links a,
+  .footer.content .links a:visited,
+  .footer.content .links a:hover,
+  .minicart-wrapper .action.showcart:before {
+    color: @color-white;
+  }
+
+  .message.success,
+  .message.success > *:first-child:before {
+    color: @color-message-success;
+  }
+
+  .message.info,
+  .message.info > *:first-child:before {
+    color: @color-blue1;
+  }
+
+  .message.warning,
+  .message.warning > *:first-child:before {
+    color: @color-light-red;
+    background-color: @color-white;
+  }
+
+  .message.error,
+  .message.error > *:first-child:before {
+    color: @color-brownie1;
+  }
+}
+
