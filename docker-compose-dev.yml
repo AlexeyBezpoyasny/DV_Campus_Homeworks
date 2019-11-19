@@ -8,13 +8,18 @@ services:
     sysctls:
       - net.ipv4.ip_unprivileged_port_start=0
     labels:
-      - traefik.http.frontend.rule=Host:alexey-bezpoyasny.local,www.alexey-bezpoyasny.local, alexey-bezpoyasny-second.local, www.alexey-bezpoyasny-second.local
-      - traefik.https.frontend.rule=Host:alexey-bezpoyasny.local,www.alexey-bezpoyasny.local, alexey-bezpoyasny-second.local, www.alexey-bezpoyasny-second.local
+      - traefik.http.frontend.rule=Host:alexey-bezpoyasny.local,www.alexey-bezpoyasny.local,alexey-bezpoyasny-second.local,www.alexey-bezpoyasny-second.local
+      - traefik.https.frontend.rule=Host:alexey-bezpoyasny.local,www.alexey-bezpoyasny.local,alexey-bezpoyasny-second.local,www.alexey-bezpoyasny-second.local
       # develop with extension that allows setting livereload host and port - https://github.com/lokcito/livereload-extensions
-      - traefik.grunt.frontend.rule=Host:alexey-bezpoyasny.local,www.alexey-bezpoyasny.local, alexey-bezpoyasny-second.local, www.alexey-bezpoyasny-second.local
+      - traefik.grunt.frontend.rule=Host:alexey-bezpoyasny.local,www.alexey-bezpoyasny.local,alexey-bezpoyasny-second.local,www.alexey-bezpoyasny-second.local
       - traefik.grunt.frontend.entryPoints=grunt
       - traefik.grunt.protocol=http
       - traefik.grunt.port=35729
+      - traefik.gruntHttp.frontend.rule=Host:alexey-bezpoyasny.local,www.alexey-bezpoyasny.local,alexey-bezpoyasny-second.local,www.alexey-bezpoyasny-second.local
+      - traefik.gruntHttp.frontend.entryPoints=gruntHttp
+      - traefik.gruntHttp.backend=grunt
+      - traefik.gruntHttp.protocol=http
+      - traefik.gruntHttp.port=35729
     extra_hosts:
       # For Linux users only till docker.host.internal is not available by default
       # https://github.com/docker/libnetwork/pull/2348/files

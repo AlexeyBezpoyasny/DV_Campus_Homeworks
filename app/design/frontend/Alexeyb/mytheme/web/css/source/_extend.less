@@ -5,7 +5,6 @@
 @color-message-success: @color-dark-blue;
 @color-light-red: #ffcccb;
 
-
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
   .page-header .panel.wrapper,
   .page-footer {
@@ -40,7 +39,7 @@
     color: @color-white;
   }
 
-  a, a:visited {
+  a, a:visited, .action:hover {
     color: @links-color;
   }
 
@@ -53,10 +52,20 @@
 
   .message.success,
   .message.success > *:first-child:before {
+    color: @color-white;
+    background-color: @color-message-success;
+  }
+
+  .message.success > *:first-child:before {
     color: @color-message-success;
   }
 
   .message.info,
+  .message.info > *:first-child:before {
+    color: @color-white;
+    background-color: @color-blue1;
+  }
+
   .message.info > *:first-child:before {
     color: @color-blue1;
   }

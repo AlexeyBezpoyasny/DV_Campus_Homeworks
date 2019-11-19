@@ -24,15 +24,15 @@ services:
     restart: always
     labels:
       - traefik.enable=true
-      - traefik.http.frontend.rule=Host:alexey-bezpoyasny.local,www.alexey-bezpoyasny.local, alexey-bezpoyasny-second.local, www.alexey-bezpoyasny-second.local
+      - traefik.http.frontend.rule=Host:alexey-bezpoyasny.local,www.alexey-bezpoyasny.local,alexey-bezpoyasny-second.local,www.alexey-bezpoyasny-second.local
       - traefik.http.frontend.entryPoints=http
-      - traefik.https.frontend.rule=Host:alexey-bezpoyasny.local,www.alexey-bezpoyasny.local, alexey-bezpoyasny-second.local, www.alexey-bezpoyasny-second.local
+      - traefik.https.frontend.rule=Host:alexey-bezpoyasny.local,www.alexey-bezpoyasny.local,alexey-bezpoyasny-second.local,www.alexey-bezpoyasny-second.local
       - traefik.https.frontend.entryPoints=https
       - traefik.https.protocol=https
       - traefik.https.port=443
     # Must add extra_hosts to be written to /etc/hosts - otherwise containerized application can not curl itself
     extra_hosts:
-      - "alexey-bezpoyasny.local www.alexey-bezpoyasny.local alexey-bezpoyasny-second.local wwww.alexey-bezpoyasny-second.local:127.0.0.1"
+      - "alexey-bezpoyasny.local www.alexey-bezpoyasny.local alexey-bezpoyasny-second.local www.alexey-bezpoyasny-second.local:127.0.0.1"
 #    links:
 #      - memcached
     external_links:
