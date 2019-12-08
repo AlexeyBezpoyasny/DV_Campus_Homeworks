@@ -236,6 +236,7 @@ return [
         'Magento_WishlistSampleData' => 1,
         'Alexeyb_CMS' => 1,
         'Alexeyb_Catalog' => 1,
+        'Alexeyb_ControllerDemo' => 1,
         'Alexeyb_SidebarLeftImage' => 1,
         'Amazon_Core' => 1,
         'Amazon_Login' => 1,
