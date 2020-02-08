@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd"
+>
+    <body>
+        <referenceBlock name="before.body.end">
+            <container name="alexeyb.chat">
+                <block class="Magento\Framework\View\Element\Template"
+                       name="alexeyb.chat.button.open"
+                       template="Alexeyb_Chat::button_open_chat.phtml"
+                />
+                <block class="Magento\Framework\View\Element\Template"
+                       name="alexeyb.chat.popup"
+                       template="Alexeyb_Chat::popup.phtml"
+                />
+            </container>
+        </referenceBlock>
+        <referenceContainer name="header-wrapper">
+            <block class="Magento\Framework\View\Element\Template"
+                   name="alexeyb.chat.button.open.header"
+                   before="minicart"
+                   template="Alexeyb_Chat::button_open_chat_header.phtml"
+            />
+        </referenceContainer>
+    </body>
+</page>

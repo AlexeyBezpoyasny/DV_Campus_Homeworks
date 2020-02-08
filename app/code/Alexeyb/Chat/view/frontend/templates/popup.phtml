@@ -1,0 +1,35 @@
+<?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
+<div id="alexeyb-chat-popup" style="display: none"
+     data-mage-init='{"alexeybChatPopup": {}}'>
+    <h3><?= $block->escapeHtml(__('Chat')) ?></h3>
+    <div class="alexeyb-chat-popup-messages-wrap">
+        <span class="alexeyb-chat-message-date"></span>
+        <p class="alexeyb-chat-messages"></p>
+    </div>
+    <form action="javascript:void(0);"
+          id="alexeyb-chat-form"
+          method="post"
+          data-mage-init='{"alexeybChatForm": {"action": "<?= $block->escapeUrl($block->getUrl('alexeyb_chat/chatForm/save')) ?>"}}'
+          onsubmit="return false;"
+    >
+        <label>
+            <span class="alexeyb-chat-popup-message"><?= $block->escapeHtml(__('How can we help you?')) ?></span>
+            <textarea id="alexeyb-chat-enter-message"
+                      name="alexeyb_chat_enter_message"
+                      placeholder="<?= $block->escapeHtml(__('Enter your question')) ?>"
+                      data-validate="{'validate-no-empty':true}"
+            >
+            </textarea>
+        </label>
+        <input type="hidden" name="hideit" id="hideit" value=""/>
+        <button type="submit"
+                class="action primary"
+                id="alexeyb-chat-submit-message-button">
+            <span><?= $block->escapeHtml(__('Send message')) ?></span>
+        </button>
+        <button type="button"
+                id="alexeyb-chat-close-popup-button">
+            <?= $block->escapeHtml(__('Close')) ?>
+        </button>
+    </form>
+</div>

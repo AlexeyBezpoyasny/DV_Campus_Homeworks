@@ -236,6 +236,7 @@ return [
         'Magento_WishlistSampleData' => 1,
         'Alexeyb_CMS' => 1,
         'Alexeyb_Catalog' => 1,
+        'Alexeyb_Chat' => 1,
         'Alexeyb_ControllerDemo' => 1,
         'Alexeyb_SidebarLeftImage' => 1,
         'Amazon_Core' => 1,
@@ -247,6 +248,7 @@ return [
         'Klarna_Kp' => 1,
         'Magento_PaypalReCaptcha' => 1,
         'MSP_TwoFactorAuth' => 1,
+        'Mgt_DeveloperToolbar' => 1,
         'Temando_Shipping' => 1,
         'Vertex_Tax' => 1,
         'Yotpo_Yotpo' => 1

@@ -31,16 +31,6 @@ return [
     'session' => [
         'save' => 'files'
     ],
-    'cache' => [
-        'frontend' => [
-            'default' => [
-                'id_prefix' => '40d_'
-            ],
-            'page_cache' => [
-                'id_prefix' => '40d_'
-            ]
-        ]
-    ],
     'lock' => [
         'provider' => 'db',
         'config' => [
@@ -49,8 +39,8 @@ return [
     ],
     'cache_types' => [
         'config' => 1,
-        'layout' => 0,
-        'block_html' => 0,
+        'layout' => 1,
+        'block_html' => 1,
         'collections' => 1,
         'reflection' => 1,
         'db_ddl' => 1,
@@ -60,7 +50,7 @@ return [
         'config_integration' => 1,
         'config_integration_api' => 1,
         'google_product' => 1,
-        'full_page' => 0,
+        'full_page' => 1,
         'config_webservice' => 1,
         'translate' => 1,
         'vertex' => 1
