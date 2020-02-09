@@ -23,9 +23,10 @@ define([
         /**
          * @private
          */
-        // _destroy: function () {
-        //     $(this.element).off('submit.alexeyb_chat');
-        // },
+        _destroy: function () {
+            $(document).off('alexeyb_chat_openPopup.alexeyb_chat');
+            $(this.options.closePopup).off('click.alexeyb_chat');
+        },
 
         openPopup: function () {
             $(this.element).addClass('active');

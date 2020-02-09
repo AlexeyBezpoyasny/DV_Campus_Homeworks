@@ -13,6 +13,10 @@
                        name="alexeyb.chat.popup"
                        template="Alexeyb_Chat::popup.phtml"
                 />
+                <block class="Magento\Framework\View\Element\Template"
+                       name="alexeyb.chat.button.destroy.widget"
+                       template="Alexeyb_Chat::button_destroy_widget.phtml"
+                />
             </container>
         </referenceBlock>
         <referenceContainer name="header-wrapper">

@@ -25,7 +25,7 @@ define([
          * @private
          */
         _destroy: function () {
-            $(this.element).on('submit.alexeyb_chat');
+            $(this.element).off('submit.alexeyb_chat');
         },
 
         /** validate and sent message */
