@@ -8,7 +8,10 @@ define([
     $.widget('alexeybChat.form', {
         options: {
             action: '',
-            submitMessage: '#alexeyb-chat-submit-message-button'
+            submitMessage: '#alexeyb-chat-submit-message-button',
+            textarea: '#alexeyb-chat-enter-message',
+            dateMessage: '.alexeyb-chat-message-date',
+            sentMessage: '.alexeyb-chat-messages'
         },
 
         /**
@@ -40,11 +43,11 @@ define([
 
         /** get messages from textarea and date */
         sentMessage: function () {
-            var val = $('#alexeyb-chat-enter-message').val();
+            var val = $(this.options.textarea).val();
             var date = new Date().toLocaleString();// jscs:ignore requireMultipleVarDecl
 
-            $('.alexeyb-chat-message-date').html(date);
-            $('.alexeyb-chat-messages').html(val).addClass('message-success success message');
+            $(this.options.dateMessage).html(date);
+            $(this.options.sentMessage).html(val).addClass('message-success success message');
         },
 
         /** submit message to backend */
