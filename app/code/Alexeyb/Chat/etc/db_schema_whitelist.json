@@ -1,0 +1,24 @@
+{
+    "alexeyb_chat": {
+        "column": {
+            "message_id": true,
+            "author_type": true,
+            "author_id": true,
+            "author_name": true,
+            "message_text": true,
+            "website_id": true,
+            "chat_hash": true,
+            "created_at": true
+        },
+        "index": {
+            "ALEXEYB_CHAT_AUTHOR_ID": true,
+            "ALEXEYB_CHAT_AUTHOR_NAME": true,
+            "ALEXEYB_CHAT_WEBSITE_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "ALEXEYB_CHAT_WEBSITE_ID_STORE_WEBSITE_WEBSITE_ID": true,
+            "ALEXEYB_CHAT_AUTHOR_ID_WEBSITE_ID": true
+        }
+    }
+}
