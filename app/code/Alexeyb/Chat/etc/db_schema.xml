@@ -75,10 +75,5 @@
                     referenceColumn="website_id"
                     onDelete="CASCADE"
         />
-        <constraint xsi:type="unique"
-                    referenceId="ALEXEYB_CHAT_AUTHOR_ID_WEBSITE_ID">
-            <column name="author_id"/>
-            <column name="website_id"/>
-        </constraint>
     </table>
 </schema>

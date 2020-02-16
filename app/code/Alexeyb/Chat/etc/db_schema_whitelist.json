@@ -17,8 +17,7 @@
         },
         "constraint": {
             "PRIMARY": true,
-            "ALEXEYB_CHAT_WEBSITE_ID_STORE_WEBSITE_WEBSITE_ID": true,
-            "ALEXEYB_CHAT_AUTHOR_ID_WEBSITE_ID": true
+            "ALEXEYB_CHAT_WEBSITE_ID_STORE_WEBSITE_WEBSITE_ID": true
         }
     }
 }
