@@ -12,9 +12,9 @@ define([
         _create: function () {
             $(this.element).on('click.alexeyb_chat_x', function () {
                 if ($.alexeybChat.popup) {
-                    $('#alexeyb-chat-popup').get(0).data('alexeybChatPopup').destroy();
+                    $($('#alexeyb-chat-popup').get(0)).data('alexeybChatPopup').destroy();
                 } else {
-                    $('#alexeyb-chat-popup').get(0).popup();
+                    $($('#alexeyb-chat-popup').get(0)).popup();
                 }
             });
         },
@@ -23,7 +23,7 @@ define([
          * @private
          */
         _destroy: function () {
-            $(this.element).on('click.alexeyb_chat_x');
+            $(this.element).off('click.alexeyb_chat_x');
         }
     });
 

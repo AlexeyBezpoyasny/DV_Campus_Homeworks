@@ -2,8 +2,12 @@
 <div class="button-open-chat-header">
     <a href="javascript:void(0);"
        class="button-open-chat-header__link"
-       data-mage-init='{"alexeybChatButtonOpenHeader": {}}'
+       data-mage-init='{"alexeybChatButtonOpen": {
+       "hideButton": "false"
+       }}'
     >
-        <img class="button-open-chat-header__img" src="../media/images/twodialogueboxessymbol_120591.svg" alt="">
+        <img class="button-open-chat-header__img"
+             src="<?= $block->getViewFileUrl("Alexeyb_Chat::images/twodialogueboxessymbol_120591.svg") ?>"
+             alt="<?= $block->escapeHtml(__('Chat')) ?>">
     </a>
 </div>
