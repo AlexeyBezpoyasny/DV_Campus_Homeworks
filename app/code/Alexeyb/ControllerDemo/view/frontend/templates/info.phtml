@@ -1,4 +1,9 @@
+<?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
 <div>
-    <p>Full name: <?= $block->getData('first_name') . ' ' . $block->getData('second_name') ?></p>
-    <p>Repository URL: <a href="<?= $block->getData('repository_url') ?>"><?= $block->getData('repository_url') ?></a> </p>
+    <p><?= __('Full name: '), $block->escapeHtml($block->getData('first_name') . ' ' . $block->getData('second_name')) ?></p>
+    <p><?= __('Repository URL: ') ?>
+        <a href="<?= $block->escapeUrl($block->getData('repository_url')) ?>">
+            <?= $block->escapeHtml($block->getData('repository_url')) ?>
+        </a>
+    </p>
 </div>
