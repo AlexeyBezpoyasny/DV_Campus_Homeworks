@@ -19,6 +19,11 @@
                 />
             </container>
         </referenceBlock>
+        <referenceBlock name="alexeyb.chat.popup">
+            <arguments>
+                <argument name="view_model" xsi:type="object">Alexeyb\Chat\ViewModel\ShowMessages</argument>
+            </arguments>
+        </referenceBlock>
         <referenceContainer name="header-wrapper">
             <block class="Magento\Framework\View\Element\Template"
                    name="alexeyb.chat.button.open.header"

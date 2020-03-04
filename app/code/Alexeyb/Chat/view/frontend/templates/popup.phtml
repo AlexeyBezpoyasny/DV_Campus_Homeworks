@@ -1,10 +1,33 @@
-<?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var $viewModel \Alexeyb\Chat\ViewModel\ShowMessages */
+$viewModel = $block->getViewModel()->getMessages();
+        ?>
 <div id="alexeyb-chat-popup" style="display: none"
      data-mage-init='{"alexeybChatPopup": {}}'>
     <h3><?= $block->escapeHtml(__('Chat')) ?></h3>
     <div class="alexeyb-chat-popup-messages-wrap">
-        <span class="alexeyb-chat-message-date"></span>
-        <p class="alexeyb-chat-messages"></p>
+        <ul class="alexeyb-chat-messages-list">
+            <li>
+                <p class="alexeyb-chat-popup-message"></p>
+            </li>
+            <li>
+                <span class="alexeyb-chat-message-date">
+                </span>
+                <p class="alexeyb-chat-messages">
+                </p>
+            </li>
+            <?php foreach ($viewModel as $item): ?>
+                <li>
+                <span>
+                    <?= $item->getCreatedAt() ?>
+                </span>
+                    <p class="alexeyb-chat-customer-message message-success success message">
+                        <?= $item->getMessageText() ?>
+                    </p>
+                </li>
+            <?php endforeach; ?>
+        </ul>
     </div>
     <form action="javascript:void(0);"
           id="alexeyb-chat-form"
@@ -13,7 +36,7 @@
           onsubmit="return false;"
     >
         <label>
-            <span class="alexeyb-chat-popup-message"><?= $block->escapeHtml(__('How can we help you?')) ?></span>
+            <span><?= $block->escapeHtml(__('How can we help you?')) ?></span>
             <textarea id="alexeyb-chat-enter-message"
                       name="alexeyb_chat_enter_message"
                       placeholder="<?= $block->escapeHtml(__('Enter your question')) ?>"

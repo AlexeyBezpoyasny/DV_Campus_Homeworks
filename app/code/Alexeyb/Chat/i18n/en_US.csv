@@ -2,4 +2,9 @@
 "How can we help you?","How can we help you?"
 "Enter your question","Enter your question"
 "Send message","Send message"
-"Close","Close
+"Close","Close"
+"Can\'t send message: %s is not set.","Can\'t send message: %s is not set."
+"Your message don\'t be send","Your message don\'t be send"
+"Administrator will answer you within 5 minutes!","Administrator will answer you within 5 minutes!"
+"Your message can't be sent. Please, wright to us at example@examle.com.","Your message can't be sent. Please, wright to us at example@examle.com."
+"Can't send message: %s is not set.","Can't send message: %s is not set."

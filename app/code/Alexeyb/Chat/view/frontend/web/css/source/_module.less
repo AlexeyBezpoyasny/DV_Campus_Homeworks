@@ -66,21 +66,21 @@
     z-index: 102;
   }
 
-    .alexeyb-chat-popup-messages-wrap {
-      flex-basis: 50%;
-      overflow: auto;
-      background-color: @color-white;
-    }
+  .alexeyb-chat-popup-messages-wrap {
+    flex-basis: 50%;
+    overflow: auto;
+    background-color: @color-white;
+  }
 
-    #alexeyb-chat-form {
-      flex-basis: 40%;
-      margin-top: 15px;
-    }
+  #alexeyb-chat-form {
+    flex-basis: 40%;
+    margin-top: 15px;
+  }
 
-    & textarea {
-      min-height: 30px;
-      resize: none;
-    }
+  & textarea {
+    min-height: 30px;
+    resize: none;
+  }
 
 
   #alexeyb-chat-enter-message-error {
@@ -88,9 +88,17 @@
     padding-bottom: 5px;
   }
 
-  .alexeyb-chat-messages {
+  .alexeyb-chat-messages.message.success,
+  .alexeyb-chat-customer-message.message.success,
+  .alexeyb-chat-popup-message.message.error {
     border-radius: 10px;
     width: 50%;
+    padding-left: 5px;
+  }
+
+  .alexeyb-chat-messages-list {
+    list-style: none;
+    padding-left: 5px;
   }
 }
 
