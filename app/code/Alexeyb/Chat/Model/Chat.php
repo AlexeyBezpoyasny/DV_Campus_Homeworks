@@ -7,17 +7,20 @@ use Magento\Framework\Exception\LocalizedException;
 
 /**
  * @method int getMessageId()
- * @method $this setMessageId(int $preferenceId)
+ * @method $this setMessageId(int $messageId)
  * @method int getAuthorId()
- * @method $this setAuthorId(int $customerId)
+ * @method $this setAuthorId(int $authorId)
  * @method int getWebsiteId()
  * @method $this setWebsiteId(int $websiteId)
  * @method string getMessageText()
  * @method $this setMessageText(string $messageText)
  * @method string getChatHash()
  * @method $this setChatHash(string $chatHash)
- * @method string getCreatedAt()
- * @method $this setCreatedAt(string $createdAt)
+ * @method string getAuthorName()
+ * @method $this setAuthorName(string $authorName)
+ * @method string getAuthorType()
+ * @method $this setAuthorType(string $authorType)
+ *
  */
 class Chat extends \Magento\Framework\Model\AbstractModel
 {

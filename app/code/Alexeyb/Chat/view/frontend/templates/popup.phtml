@@ -1,8 +1,8 @@
 <?php
 /** @var \Magento\Framework\View\Element\Template $block */
-/** @var $viewModel \Alexeyb\Chat\ViewModel\ShowMessages */
-$viewModel = $block->getViewModel()->getMessages();
-        ?>
+/** @var \Alexeyb\Chat\ViewModel\ShowMessages $viewModel */
+$viewModel = $block->getViewModel();
+?>
 <div id="alexeyb-chat-popup" style="display: none"
      data-mage-init='{"alexeybChatPopup": {}}'>
     <h3><?= $block->escapeHtml(__('Chat')) ?></h3>
@@ -17,7 +17,7 @@ $viewModel = $block->getViewModel()->getMessages();
                 <p class="alexeyb-chat-messages">
                 </p>
             </li>
-            <?php foreach ($viewModel as $item): ?>
+            <?php foreach ($viewModel->getMessages() as $item): ?>
                 <li>
                 <span>
                     <?= $item->getCreatedAt() ?>
