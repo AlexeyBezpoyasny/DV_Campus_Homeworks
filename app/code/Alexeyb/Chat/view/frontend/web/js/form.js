@@ -1,8 +1,9 @@
 define([
     'jquery',
+    'Magento_Customer/js/customer-data',
     'jquery-ui-modules/widget',
     'mage/translate'
-], function ($) {
+], function ($, customerData) {
     'use strict';
 
     $.widget('alexeybChat.form', {
@@ -19,6 +20,11 @@ define([
          */
         _create: function () {
             $(this.element).on('submit.alexeyb_chat', $.proxy(this.saveMessage, this));
+
+            console.log(customerData.get('alexeyb-chat')());
+            customerData.get('alexeyb-chat').subscribe(function (value) {
+                console.log(value);
+            });
         },
 
         /**
