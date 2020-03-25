@@ -52,6 +52,6 @@ class Chat implements \Magento\Customer\CustomerData\SectionSourceInterface
         foreach ($chatCollection as $chatModel) {
             $data[] = $chatModel->getMessageText();
         }
-        return $data;
+        return $data ?? [];
     }
 }
